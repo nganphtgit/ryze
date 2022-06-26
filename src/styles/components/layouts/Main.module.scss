@@ -1,0 +1,11 @@
+@import '../../global/common.scss';
+
+.layoutWrapper {
+  display: flex;
+  flex-direction: row;
+  .main {
+    width: 65vw;
+    border-left: 1px solid $second;
+    padding: 1.5rem;
+  }
+}
