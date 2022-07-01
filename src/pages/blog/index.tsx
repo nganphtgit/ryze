@@ -1,7 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import Head from 'next/head';
-import matter from 'gray-matter';
 
 const Banner = () => {
   return (
@@ -23,8 +21,6 @@ export function getStaticProps() {
 
 export default function Blog() {
   return (
-    <>
-      <Banner />
-    </>
+    <Banner />
   );
 };
