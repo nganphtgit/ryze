@@ -6,6 +6,8 @@
   .main {
     width: 65vw;
     border-left: 1px solid $second;
-    padding: 1.5rem;
+    .content {
+      padding: 1.5rem;
+    }
   }
 }

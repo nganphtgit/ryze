@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Header.module.scss';
+import styles from '@styles/components/Header.module.scss';
 import { Container } from '@mui/material';
 
 export default function Banner() {

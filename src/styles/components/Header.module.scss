@@ -1,1 +1,23 @@
-@import '../variables';
+@import '../global/common.scss';
+
+.navigation {
+  border-bottom: 1px solid $second;
+
+  ul {
+    width: 80%;
+    margin: auto;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 0;
+
+    li {      
+      padding-bottom: 1.5rem;
+      &.active {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
+
+}

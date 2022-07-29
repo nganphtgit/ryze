@@ -1,5 +1,5 @@
 import styles from '@styles/components/Sidebar.module.scss';
-import { GitHub, LinkedIn, Email } from '@mui/icons-material';
+import { GitHub, LinkedIn, Email, School } from '@mui/icons-material';
 import Link from 'next/link';
 
 type SocialItem = {
@@ -18,6 +18,9 @@ const socials = [{
   link: 'https://www.linkedin.com/in/julie-ph%E1%BA%A1m-56b808165/',
   icon: 'linkedin',
 }, {
+  link: 'https://scholar.google.com.vn/citations?user=5IUnAEYAAAAJ&hl=vi',
+  icon: 'school',
+}, {
   link: 'mailto:tuyetnganphamhoang@gmail.com',
   icon: 'email',
 }];
@@ -26,6 +29,7 @@ const socialIcons: SocialIcons = {
   github: () => <GitHub/>,
   linkedin: () => <LinkedIn/>,
   email: () => <Email/>,
+  school: () => <School/>,
 };
 
 const Social = ({link, icon}: SocialItem) => {
