@@ -6,7 +6,6 @@ import EChartsReactCore from 'echarts-for-react/lib/core';
 import * as echarts from 'echarts/core';
 import { RadarChart } from 'echarts/charts';
 import { RadarComponent, TooltipComponent, GridComponent } from 'echarts/components';
-import { TooltipPositionCallbackParams } from 'echarts/types/dist/shared';
 import {
   CanvasRenderer,
 } from 'echarts/renderers';
@@ -24,7 +23,7 @@ const Introduction = () => {
       <p>The most of my working time, I work in a Full-stack Developer position</p>
       <p>I like to build fancy, effective UI. I like to work with data too, such as computational, visualization</p>
       <p>More challenges, more effort, the working challenge inspire me</p>
-      <p>I hope to learn a Master's degree in Korea, and I wish to live in Korea for a time</p>
+      <p>I hope to learn a Master&apos;s degree in Korea, and I wish to live in Korea for a time</p>
       <p>My communication is not good, but I always try to improve</p>
     </div>
   );
