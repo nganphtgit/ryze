@@ -4,6 +4,9 @@
   width: calc(100% - 65vw);
   height: 100vh;
   padding: 0;
+  position: fixed;
+  top: 0;
+  border-right: 1px solid $second;
   // display: inline-flex;
   // justify-content: center;
   .contentWrapper {

@@ -5,7 +5,8 @@
   flex-direction: row;
   .main {
     width: 65vw;
-    border-left: 1px solid $second;
+    margin-left: auto;
+    // border-left: 1px solid $second;
     .content {
       padding: 2.5rem 2.5rem 0 2.5rem;
     }
