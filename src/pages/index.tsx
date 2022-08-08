@@ -22,8 +22,8 @@ const Introduction = () => {
       <p>I like learning, especially computer, spending time coding, reading books, revising, and refactoring</p>
       <p>The most of my working time, I work in a Full-stack Developer position</p>
       <p>I like to build fancy, effective UI. I like to work with data too, such as computational, visualization</p>
-      <p>More challenges, more effort, the working challenge inspire me</p>
-      <p>I hope to learn a Master&apos;s degree in Korea, and I wish to live in Korea for a time</p>
+      <p>More challenging, more effort, the working challenge inspire me</p>
+      <p>I hope to learn a Master&apos;s degree or work in Korea, and I wish to live in Korea for a time</p>
       <p>My communication is not good, but I always try to improve</p>
     </div>
   );
