@@ -4,8 +4,8 @@ import ContentLayout from 'components/layouts/content';
 import styles from '@styles/pages/Index.module.scss';
 import EChartsReactCore from 'echarts-for-react/lib/core';
 import * as echarts from 'echarts/core';
-import { RadarChart } from 'echarts/charts';
-import { RadarComponent, TooltipComponent, GridComponent } from 'echarts/components';
+import { RadarChart, RadarSeriesOption } from 'echarts/charts';
+import { RadarComponent, RadarComponentOption, TooltipComponent, GridComponent } from 'echarts/components';
 import {
   CanvasRenderer,
 } from 'echarts/renderers';
@@ -14,7 +14,7 @@ echarts.use(
   [RadarChart, RadarComponent, TooltipComponent, GridComponent, CanvasRenderer]
 );
 
-const Introduction = () => {
+const Introduction = (): JSX.Element => {
   return (
     <div className={styles.intro}>
       <h1>Hello</h1>
@@ -29,53 +29,52 @@ const Introduction = () => {
   );
 };
 
-const MySkill = () => {
-  const option = {
-    radar: {
-      indicator: [
-        { name: 'Programming', max: 100, min: 0 },
-        { name: 'Git', max: 100, min: 0 },
-        { name: 'Front-end', max: 100, min: 0 },
-        { name: 'Back-end', max: 100, min: 0 },
-        { name: 'Database', max: 100, min: 0 },
-        { name: 'Cloud services', max: 100, min: 0 },
-        { name: 'Bash', max: 100, min: 0 },
-        { name: 'Data Structure and Algorithm', max: 100, min: 0 },
-      ],
-      radius: '70%',
-      axisName: {
-        color: '#fff',
-        fontFamily: 'Roboto mono',
-      },
-      
+const MySkill = (): JSX.Element => {
+  const radarOption: RadarComponentOption = {
+    indicator: [
+      { name: 'Programming', max: 100, min: 0 },
+      { name: 'Git', max: 100, min: 0 },
+      { name: 'Front-end', max: 100, min: 0 },
+      { name: 'Back-end', max: 100, min: 0 },
+      { name: 'Database', max: 100, min: 0 },
+      { name: 'Cloud services', max: 100, min: 0 },
+      { name: 'Bash', max: 100, min: 0 },
+      { name: 'Data Structure and Algorithm', max: 100, min: 0 },
+    ],
+    radius: '70%',
+    axisName: {
+      color: '#fff',
+      fontFamily: 'Roboto mono',
     },
-    series: [
+  };
+  const radarSeries: RadarSeriesOption = {
+    name: 'Skill',
+    type: 'radar',
+    symbol: 'triangle',
+    label: {
+      show: true,
+      color: '#fff',
+      fontFamily: 'Roboto mono',
+    },
+    emphasis: {
+      areaStyle: {
+        color: 'rgba(32, 32, 96, 0.9)',
+      },
+    },
+    data: [
       {
-        name: 'Skill',
-        type: 'radar',
-        symbol: 'triangle',
-        label: {
-          show: true,
-          color: '#fff',
-          fontFamily: 'Roboto mono',
+        value: [80, 75, 85, 70, 80, 75, 65, 70],
+        name: 'My skills',
+        areaStyle: {
+          color: 'rgba(32, 32, 96, 0.7)',
         },
-        emphasis: {
-          areaStyle: {
-            color: 'rgba(32, 32, 96, 0.9)',
-          },
-        },
-        data: [
-          {
-            value: [80, 75, 85, 70, 80, 75, 65, 70],
-            name: 'My skills',
-            areaStyle: {
-              color: 'rgba(32, 32, 96, 0.7)',
-            },
-          },
-        ],
-      }
-    ]
-  }
+      },
+    ],
+  } 
+  const option = {
+    radar: radarOption,
+    series: [radarSeries],
+  };
   return (
     <div className={styles.skills}>
       <h1>My Skills</h1>
