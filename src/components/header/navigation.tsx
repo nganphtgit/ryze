@@ -10,20 +10,20 @@ const navigations = [{
     title: 'About',
   }, {
     pageId: 'posts',
-    link: '/posts',
+    link: '#',
     title: 'Posts',
   }, {
     pageId: 'projects',
-    link: '/projects',
+    link: '#',
     title: 'Projects',
   }, {
     pageId: 'accomplishments',
-    link: '/accomplishments',
+    link: '#',
     title: 'Accomplishments',
   }, {
-    pageId: 'contact',
-    link: '/contact',
-    title: 'Contact',
+    pageId: 'quotes',
+    link: '/quotes',
+    title: 'Quotes',
   },
 ];
 
@@ -33,7 +33,9 @@ export default function Navigation({pageId}: Props) {
       <ul>
         {navigations.map((item) => (
           <li key={item.pageId} className={item.pageId === pageId ? styles.active : ''}>
-            {item.title}
+            <a href={item.link}>
+              {item.title}
+            </a>
           </li>
         ))}
       </ul>
