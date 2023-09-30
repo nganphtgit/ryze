@@ -12,7 +12,7 @@ const Introduction = (): JSX.Element => {
       <p>Love solving <i>logical</i> stuffs</p>
       <p>Learning forever</p>
       <p>Still love South Korea very much</p>
-      <p>A big fan of Faker, and a Liverpool \"half-season\" fan</p>
+      <p>A big fan of Faker, and a Liverpool &quot;half-season&quot; fan</p>
       <p>Love beautiful things</p>
       <p>I do not really have any idea for this site, but I think it is great to have a space for dancing freely</p>
     </div>
