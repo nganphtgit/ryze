@@ -53,7 +53,6 @@ export default function Sidebar() {
             <img src='/img/profile/me.jpg' />
           </div>
           <h2>Julie Pham</h2>
-          <small>A Software Engineer<br/>Do anything about software<br/>Code, read, and learn</small>
           <div className={styles.socials}>
             {socials.map((item, i) => (
               <Social key={i} link={item.link} icon={item.icon}/>
@@ -61,7 +60,7 @@ export default function Sidebar() {
           </div>
         </div>
         <footer>
-          <p>&copy; <small>Eiluj Nah {new Date().getFullYear()}</small></p>
+          <p>&copy; <small>Eiluj Pham {new Date().getFullYear()}</small></p>
         </footer>
       </div>
     </aside>
