@@ -1,10 +1,8 @@
+
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import ContentLayout from 'components/layouts/content';
 import styles from '@styles/pages/Index.module.scss';
-import EChartsReactCore from 'echarts-for-react/lib/core';
-import * as echarts from 'echarts/core';
-import { CustomChart, CustomSeriesOption } from 'echarts/charts';
 
 const Introduction = (): JSX.Element => {
   return (
@@ -14,7 +12,7 @@ const Introduction = (): JSX.Element => {
       <p>Love solving <i>logical</i> stuffs</p>
       <p>Learning forever</p>
       <p>Still love South Korea very much</p>
-      <p>A big fan of Faker, and a Liverpool "half-season" fan</p>
+      <p>A big fan of Faker, and a Liverpool \"half-season\" fan</p>
       <p>Love beautiful things</p>
       <p>I do not really have any idea for this site, but I think it is great to have a space for dancing freely</p>
     </div>
