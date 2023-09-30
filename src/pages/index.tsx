@@ -4,85 +4,30 @@ import ContentLayout from 'components/layouts/content';
 import styles from '@styles/pages/Index.module.scss';
 import EChartsReactCore from 'echarts-for-react/lib/core';
 import * as echarts from 'echarts/core';
-import { RadarChart, RadarSeriesOption } from 'echarts/charts';
-import { RadarComponent, RadarComponentOption, TooltipComponent, GridComponent } from 'echarts/components';
-import {
-  CanvasRenderer,
-} from 'echarts/renderers';
-
-echarts.use(
-  [RadarChart, RadarComponent, TooltipComponent, GridComponent, CanvasRenderer]
-);
+import { CustomChart, CustomSeriesOption } from 'echarts/charts';
 
 const Introduction = (): JSX.Element => {
   return (
     <div className={styles.intro}>
       <h1>Hello</h1>
       <p>I am a Software Engineer</p>
-      <p>I like learning, especially computer, spending time coding, reading books, revising, and refactoring</p>
-      <p>The most of my working time, I work in a Full-stack Developer position</p>
-      <p>I like to build fancy, effective UI. I like to work with data too, such as computational, visualization</p>
-      <p>More challenging, more effort, the working challenges inspire me</p>
-      <p>I hope to learn a Master&apos;s degree or work in Korea, and I wish to live in Korea for a time</p>
-      <p>My communication is not good, but I always try to improve</p>
+      <p>Love solving <i>logical</i> stuffs</p>
+      <p>Learning forever</p>
+      <p>Still love South Korea very much</p>
+      <p>A big fan of Faker, and a Liverpool "half-season" fan</p>
+      <p>Love beautiful things</p>
+      <p>I do not really have any idea for this site, but I think it is great to have a space for dancing freely</p>
     </div>
   );
 };
 
-const MySkill = (): JSX.Element => {
-  const radarOption: RadarComponentOption = {
-    indicator: [
-      { name: 'Programming', max: 100, min: 0 },
-      { name: 'Git', max: 100, min: 0 },
-      { name: 'Front-end', max: 100, min: 0 },
-      { name: 'Back-end', max: 100, min: 0 },
-      { name: 'Database', max: 100, min: 0 },
-      { name: 'Cloud services', max: 100, min: 0 },
-      { name: 'Bash', max: 100, min: 0 },
-      { name: 'Data Structure and Algorithm', max: 100, min: 0 },
-    ],
-    radius: '70%',
-    axisName: {
-      color: '#fff',
-      fontFamily: 'Roboto mono',
-    },
-  };
-  const radarSeries: RadarSeriesOption = {
-    name: 'Skill',
-    type: 'radar',
-    symbol: 'triangle',
-    label: {
-      show: true,
-      color: '#fff',
-      fontFamily: 'Roboto mono',
-    },
-    emphasis: {
-      areaStyle: {
-        color: 'rgba(32, 32, 96, 0.9)',
-      },
-    },
-    data: [
-      {
-        value: [80, 75, 85, 70, 80, 75, 65, 70],
-        name: 'My skills',
-        areaStyle: {
-          color: 'rgba(32, 32, 96, 0.7)',
-        },
-      },
-    ],
-  } 
-  const option = {
-    radar: radarOption,
-    series: [radarSeries],
-  };
+const Interests = (): JSX.Element => {
   return (
-    <div className={styles.skills}>
-      <h1>My Skills</h1>
-      <EChartsReactCore
-        echarts={echarts}
-        option={option}
-        style={{ width: '85%', height: '85%' }}
-      />
+    <div className={styles.interests}>
+      <h2>Interests</h2>
+      <p>Lately, I often entertain myself by walking around Saigon - Cholon and taking photos every weekend</p>
+      <p>Follow me at <a href="https://www.instagram.com/phameiluj/">https://www.instagram.com/phameiluj/</a></p>
+      <p>Also passionate about sports, both watching and playing</p>
     </div>
   );
 };
@@ -96,7 +41,7 @@ const Home: NextPage = () => {
       </Head>
       <ContentLayout pageId={'about'}>
         <Introduction/>
-        <MySkill/>
+        <Interests/>
       </ContentLayout>
     </>
   );
